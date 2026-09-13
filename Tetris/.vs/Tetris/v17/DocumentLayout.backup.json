@@ -1,0 +1,229 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\karen\\source\\repos\\Tetris\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Pieza.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\Pieza.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Pieza.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\Pieza.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Tablero.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\Tablero.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Retornar.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\Retornar.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Tablero.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\Tablero.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Ordenamiento.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\Ordenamiento.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Interfaz.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\Interfaz.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Puntajes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\Puntajes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Juego.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\Juego.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\ColaEventos.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\ColaEventos.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\PiloHold.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\PiloHold.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\ColaPiezas.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\ColaPiezas.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Tetris.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\Tetris.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Pieza.cpp",
+              "DocumentMoniker": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Pieza.cpp",
+              "RelativeDocumentMoniker": "Tetris\\Pieza.cpp",
+              "ToolTip": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Pieza.cpp",
+              "RelativeToolTip": "Tetris\\Pieza.cpp",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAAAIQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-09-12T23:07:13.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Pieza.h",
+              "DocumentMoniker": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Pieza.h",
+              "RelativeDocumentMoniker": "Tetris\\Pieza.h",
+              "ToolTip": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Pieza.h",
+              "RelativeToolTip": "Tetris\\Pieza.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-09-02T00:30:29.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Tablero.cpp",
+              "DocumentMoniker": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Tablero.cpp",
+              "RelativeDocumentMoniker": "Tetris\\Tablero.cpp",
+              "ToolTip": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Tablero.cpp",
+              "RelativeToolTip": "Tetris\\Tablero.cpp",
+              "ViewState": "AgIAAEsAAAAAmsIRWm0RwGUAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-09-09T19:16:28.994Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Ordenamiento.h",
+              "DocumentMoniker": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Ordenamiento.h",
+              "RelativeDocumentMoniker": "Tetris\\Ordenamiento.h",
+              "ToolTip": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Ordenamiento.h",
+              "RelativeToolTip": "Tetris\\Ordenamiento.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-09-02T00:31:28.542Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Retornar.h",
+              "DocumentMoniker": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Retornar.h",
+              "RelativeDocumentMoniker": "Tetris\\Retornar.h",
+              "ToolTip": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Retornar.h",
+              "RelativeToolTip": "Tetris\\Retornar.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-09-02T00:29:18.314Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Tablero.h",
+              "DocumentMoniker": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Tablero.h",
+              "RelativeDocumentMoniker": "Tetris\\Tablero.h",
+              "ToolTip": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Tablero.h",
+              "RelativeToolTip": "Tetris\\Tablero.h",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-09-02T00:28:05.032Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Interfaz.h",
+              "DocumentMoniker": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Interfaz.h",
+              "RelativeDocumentMoniker": "Tetris\\Interfaz.h",
+              "ToolTip": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Interfaz.h",
+              "RelativeToolTip": "Tetris\\Interfaz.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-09-02T00:31:45.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Puntajes.h",
+              "DocumentMoniker": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Puntajes.h",
+              "RelativeDocumentMoniker": "Tetris\\Puntajes.h",
+              "ToolTip": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Puntajes.h",
+              "RelativeToolTip": "Tetris\\Puntajes.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-09-02T00:31:04.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Juego.h",
+              "DocumentMoniker": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Juego.h",
+              "RelativeDocumentMoniker": "Tetris\\Juego.h",
+              "ToolTip": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Juego.h",
+              "RelativeToolTip": "Tetris\\Juego.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-09-02T00:30:47.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ColaEventos.h",
+              "DocumentMoniker": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\ColaEventos.h",
+              "RelativeDocumentMoniker": "Tetris\\ColaEventos.h",
+              "ToolTip": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\ColaEventos.h",
+              "RelativeToolTip": "Tetris\\ColaEventos.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-09-02T00:30:12.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PiloHold.h",
+              "DocumentMoniker": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\PiloHold.h",
+              "RelativeDocumentMoniker": "Tetris\\PiloHold.h",
+              "ToolTip": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\PiloHold.h",
+              "RelativeToolTip": "Tetris\\PiloHold.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-09-02T00:29:00.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ColaPiezas.h",
+              "DocumentMoniker": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\ColaPiezas.h",
+              "RelativeDocumentMoniker": "Tetris\\ColaPiezas.h",
+              "ToolTip": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\ColaPiezas.h",
+              "RelativeToolTip": "Tetris\\ColaPiezas.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-09-02T00:28:39.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Tetris.cpp",
+              "DocumentMoniker": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Tetris.cpp",
+              "RelativeDocumentMoniker": "Tetris\\Tetris.cpp",
+              "ToolTip": "C:\\Users\\karen\\source\\repos\\Tetris\\Tetris\\Tetris.cpp",
+              "RelativeToolTip": "Tetris\\Tetris.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-08-30T21:34:27.275Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
