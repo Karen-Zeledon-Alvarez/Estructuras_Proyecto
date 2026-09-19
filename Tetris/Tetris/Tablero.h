@@ -1,4 +1,5 @@
 #pragma once
+#include "Pieza.h"
 #ifndef TABLERO_H
 #define TABLERO_H
 
@@ -12,7 +13,7 @@ class Tablero
 private:
     NodoFila* inicio;
     NodoFila* final;
-
+    
 public:
     Tablero();
     ~Tablero();
@@ -28,6 +29,22 @@ public:
     bool filaCompleta(NodoFila* fila);
 
     void limpiarLineas();
+    
+    bool PuedoColocar(Pieza pieza, int nuevaFila, int nuevaColumna, int nuevaOrientacion);
+
+    bool puedoMover(Pieza pieza, int nuevaFila, int nuevaColumna);
+
+    NodoFila* obtenerFila(int numeroFila);
+
+    void moverDerecha(Pieza& pieza);
+
+    void moverIzquierda(Pieza& pieza);
+
+    bool moverAbajo(Pieza& pieza);
+
+    void fijarPieza(Pieza& pieza);
+
+    bool rotar(Pieza& pieza);
 };
 
 #endif 

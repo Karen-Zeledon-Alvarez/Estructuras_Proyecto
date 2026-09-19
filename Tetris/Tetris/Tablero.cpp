@@ -1,13 +1,15 @@
 #include "Tablero.h"
 #include <iostream>
 
+
 using namespace std;
 
 Tablero::Tablero() {
 	inicio = nullptr;
 	final = nullptr;
 }
-
+Tablero::~Tablero() {
+}
 
 void Tablero::inicializar() {
 
@@ -55,7 +57,7 @@ void Tablero::establecerCelda(int fila, int columna, int valor) {
 	}
 	actual->celdas[columna] = valor;
 }
-bool filaCompleta(NodoFila* fila) {
+bool Tablero::filaCompleta(NodoFila* fila) {
 	for (int k = 0;k < 10;k++) {
 		if (fila->celdas[k] == 0) {
 			return false;
@@ -68,7 +70,7 @@ void Tablero::limpiarLineas() {
 	NodoFila* anterior = nullptr;
 	
 	while (actual != nullptr) {
-		
+
 		if (filaCompleta(actual)) {
 			NodoFila* eliminar = actual;
 
@@ -78,7 +80,7 @@ void Tablero::limpiarLineas() {
 				actual = inicio;
 			}
 			else {
-				anterior->siguiente = actual->siguiente;
+				anterior->siguiente = actual;//actual->siguiente
 				actual = actual->siguiente;
 			}
 			if (eliminar == final) {
@@ -94,10 +96,96 @@ void Tablero::limpiarLineas() {
 			if (final == nullptr) {
 				final = inicio;
 			}
-		} else{
+		}
+		else {
 
 			anterior = actual;
 			actual = actual->siguiente;
 		}
 	}
 }
+NodoFila* Tablero::obtenerFila(int numeroFila) {
+	NodoFila* actual = inicio;
+	for (int k = 0;k < numeroFila;k++) {
+		actual = actual->siguiente;
+	}
+	return actual;
+}
+bool Tablero::PuedoColocar(Pieza pieza, int nuevaFila, int nuevaColumna,int nuevaOrientacion) {
+	Pieza piezaPrueba = crearPieza(pieza.tipo, nuevaOrientacion);
+	for (int i = 0;i < 4;i++) {
+		for (int k = 0;k < 4;k++) {
+			if (pieza.forma[i][k] == 1) {
+				int filaTablero = nuevaFila + i;
+				int columnaTablero = nuevaColumna + k;
+
+				if (filaTablero < 0 || filaTablero >= 20) {
+					return false;
+				}
+				if (columnaTablero < 0 || columnaTablero >= 10) {
+					return false;
+				}
+
+				NodoFila* fila = obtenerFila(filaTablero);
+				if (fila->celdas[columnaTablero] != 0) {
+					return false;
+				}
+			}
+		}
+	}
+	return true;
+}
+bool Tablero::puedoMover(Pieza pieza, int nuevaFila, int nuevaColumna) {
+	return PuedoColocar(pieza,nuevaFila,nuevaColumna,pieza.orientacion);
+}
+void Tablero::moverIzquierda(Pieza& pieza) {
+	
+	if (puedoMover(pieza, pieza.fila, pieza.columna - 1)) {
+		pieza.columna--;
+	}
+}
+void Tablero::moverDerecha(Pieza& pieza) {
+
+	if (puedoMover(pieza, pieza.fila, pieza.columna + 1)) {
+		pieza.columna++;
+	}
+}
+bool Tablero::moverAbajo(Pieza& pieza) {
+
+	if (puedoMover(pieza, pieza.fila + 1, pieza.columna)) {
+		pieza.fila++;
+		return true;
+	}
+	
+	return false;
+}
+
+bool Tablero::rotar(Pieza& pieza) {
+	int nuevaOrientacion = (pieza.orientacion + 1) % 4;
+	if (PuedoColocar(pieza, pieza.fila, pieza.columna, nuevaOrientacion)) {
+		Pieza piezaRotada = crearPieza(pieza.tipo, nuevaOrientacion);
+		pieza.orientacion = nuevaOrientacion;
+		for (int i = 0;i < 4;i++) {
+			for (int k = 0;k < 4;k++) {
+				pieza.forma[i][k] = piezaRotada.forma[i][k];
+			}
+		}
+		return true;
+	}
+	return false;
+}
+void Tablero::fijarPieza(Pieza& pieza) {
+	for (int i = 0;i < 4;i++) {
+		for (int k = 0;k < 4;k++) {
+			if (pieza.forma[i][k] == 1) {
+				int filaTablero = pieza.fila + i;
+				int columnaTablero = pieza.columna + k;
+
+				NodoFila* fila = obtenerFila(filaTablero);
+				fila->celdas[columnaTablero] = 1;
+
+			}
+		}
+	}
+}
+
