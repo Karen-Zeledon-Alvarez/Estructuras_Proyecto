@@ -1,13 +1,12 @@
 ﻿  ColaEventos.cpp
   ColaPiezas.cpp
-  Interfaz.cpp
   Juego.cpp
-  Ordenamiento.cpp
-  Pieza.cpp
   PiloHold.cpp
-  Puntajes.cpp
-  Retornar.cpp
   Tablero.cpp
+C:\Users\karen\OneDrive\Documentos\Estructuras_Proyecto\Estructuras_Proyecto\Tetris\Tetris\Juego.cpp(9,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
   Tetris.cpp
   Generando código...
-  Tetris.vcxproj -> C:\Users\karen\OneDrive\Documentos\Estructuras_Proyecto\Estructuras_Proyecto\Tetris\x64\Debug\Tetris.exe
+C:\Users\karen\OneDrive\Documentos\Estructuras_Proyecto\Estructuras_Proyecto\Tetris\Tetris\Juego.cpp(60,1): warning C4715: 'Juego::generarTipoAleatorio': no todas las rutas de acceso de control devuelven un valor
+Juego.obj : error LNK2019: símbolo externo "public: __cdecl ColaPiezas::~ColaPiezas(void)" (??1ColaPiezas@@QEAA@XZ) sin resolver al que se hace referencia en la función "int `public: __cdecl Juego::Juego(void)'::`1'::dtor$1" (?dtor$1@?0???0Juego@@QEAA@XZ@4HA)
+Tetris.obj : error LNK2001: símbolo externo "public: __cdecl ColaPiezas::~ColaPiezas(void)" (??1ColaPiezas@@QEAA@XZ) sin resolver
+C:\Users\karen\OneDrive\Documentos\Estructuras_Proyecto\Estructuras_Proyecto\Tetris\x64\Debug\Tetris.exe : fatal error LNK1120: 1 externos sin resolver

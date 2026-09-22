@@ -3,12 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\Juego.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\Juego.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\Tablero.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\Tablero.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\Juego.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\Juego.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\Juego.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\Juego.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\ColaEventos.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\ColaEventos.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\ColaEventos.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\ColaEventos.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\Pieza.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\Pieza.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\Pieza.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\Pieza.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\Tetris.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\Tetris.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\Tablero.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\Tablero.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\PiloHold.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\PiloHold.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\ColaPiezas.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -17,22 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\ColaPiezas.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\ColaPiezas.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\Tablero.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\Tablero.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\Pieza.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\Pieza.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\Pieza.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\Pieza.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\Tablero.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6DE64F4D-11B7-4862-AC33-80B791B871E1}|Tetris\\Tetris.vcxproj|solutionrelative:Tetris\\Tablero.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,11 +58,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "ColaEventos.cpp",
+              "DocumentMoniker": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\ColaEventos.cpp",
+              "RelativeDocumentMoniker": "Tetris\\ColaEventos.cpp",
+              "ToolTip": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\ColaEventos.cpp",
+              "RelativeToolTip": "Tetris\\ColaEventos.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-09-21T22:41:19.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ColaEventos.h",
+              "DocumentMoniker": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\ColaEventos.h",
+              "RelativeDocumentMoniker": "Tetris\\ColaEventos.h",
+              "ToolTip": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\ColaEventos.h",
+              "RelativeToolTip": "Tetris\\ColaEventos.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-09-21T22:38:36.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Tetris.cpp",
+              "DocumentMoniker": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\Tetris.cpp",
+              "RelativeDocumentMoniker": "Tetris\\Tetris.cpp",
+              "ToolTip": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\Tetris.cpp",
+              "RelativeToolTip": "Tetris\\Tetris.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-09-21T21:34:01.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "ColaPiezas.h",
               "DocumentMoniker": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\ColaPiezas.h",
               "RelativeDocumentMoniker": "Tetris\\ColaPiezas.h",
@@ -58,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "ColaPiezas.cpp",
               "DocumentMoniker": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\ColaPiezas.cpp",
               "RelativeDocumentMoniker": "Tetris\\ColaPiezas.cpp",
@@ -76,38 +128,49 @@
               "RelativeDocumentMoniker": "Tetris\\Juego.h",
               "ToolTip": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\Juego.h",
               "RelativeToolTip": "Tetris\\Juego.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwA8AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-09-02T00:30:47.174Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Juego.cpp",
               "DocumentMoniker": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\Juego.cpp",
               "RelativeDocumentMoniker": "Tetris\\Juego.cpp",
               "ToolTip": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\Juego.cpp",
               "RelativeToolTip": "Tetris\\Juego.cpp",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEUAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAuwGgAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-09-17T02:21:43.323Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-17T02:21:43.323Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
+              "Title": "PiloHold.cpp",
+              "DocumentMoniker": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\PiloHold.cpp",
+              "RelativeDocumentMoniker": "Tetris\\PiloHold.cpp",
+              "ToolTip": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\PiloHold.cpp",
+              "RelativeToolTip": "Tetris\\PiloHold.cpp",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-09-19T21:14:11.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Pieza.cpp",
               "DocumentMoniker": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\Pieza.cpp",
               "RelativeDocumentMoniker": "Tetris\\Pieza.cpp",
               "ToolTip": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\Pieza.cpp",
               "RelativeToolTip": "Tetris\\Pieza.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-09-12T23:07:13.54Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "Pieza.h",
               "DocumentMoniker": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\Pieza.h",
               "RelativeDocumentMoniker": "Tetris\\Pieza.h",
@@ -119,27 +182,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Tablero.cpp",
               "DocumentMoniker": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\Tablero.cpp",
               "RelativeDocumentMoniker": "Tetris\\Tablero.cpp",
               "ToolTip": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\Tablero.cpp",
               "RelativeToolTip": "Tetris\\Tablero.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFIAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG0AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-09-09T19:16:28.994Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "Tablero.h",
               "DocumentMoniker": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\Tablero.h",
               "RelativeDocumentMoniker": "Tetris\\Tablero.h",
               "ToolTip": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras_Proyecto\\Estructuras_Proyecto\\Tetris\\Tetris\\Tablero.h",
               "RelativeToolTip": "Tetris\\Tablero.h",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAC4AAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-09-02T00:28:05.032Z"
+              "WhenOpened": "2026-09-02T00:28:05.032Z",
+              "EditorCaption": ""
             }
           ]
         }

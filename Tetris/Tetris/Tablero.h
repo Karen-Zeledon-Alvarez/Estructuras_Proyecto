@@ -28,7 +28,7 @@ public:
 
     bool filaCompleta(NodoFila* fila);
 
-    void limpiarLineas();
+    int limpiarLineas();
     
     bool PuedoColocar(Pieza pieza, int nuevaFila, int nuevaColumna, int nuevaOrientacion);
 

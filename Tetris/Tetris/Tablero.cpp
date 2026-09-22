@@ -65,7 +65,8 @@ bool Tablero::filaCompleta(NodoFila* fila) {
 	}
 	return true;
 }
-void Tablero::limpiarLineas() {
+int Tablero::limpiarLineas() {
+	int cantidadLineas = 0;
 	NodoFila* actual = inicio;
 	NodoFila* anterior = nullptr;
 	
@@ -80,19 +81,22 @@ void Tablero::limpiarLineas() {
 				actual = inicio;
 			}
 			else {
-				anterior->siguiente = actual;//actual->siguiente
+				anterior->siguiente = actual->siguiente;
 				actual = actual->siguiente;
 			}
 			if (eliminar == final) {
 				final = anterior;
 			}
 			delete eliminar;
+			cantidadLineas++;
 			NodoFila* FilaN = new NodoFila();
+
 			for (int k = 0;k < 10;k++) {
 				FilaN->celdas[k] = 0;
 			}
 			FilaN->siguiente = inicio;
 			inicio = FilaN;
+
 			if (final == nullptr) {
 				final = inicio;
 			}
@@ -103,7 +107,9 @@ void Tablero::limpiarLineas() {
 			actual = actual->siguiente;
 		}
 	}
+	return cantidadLineas;
 }
+
 NodoFila* Tablero::obtenerFila(int numeroFila) {
 	NodoFila* actual = inicio;
 	for (int k = 0;k < numeroFila;k++) {
