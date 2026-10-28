@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras de datos\\RutasAereas\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CFFF2141-FC44-4E62-848D-4B30833A4C39}|RutasAereas\\RutasAereas.vcxproj|C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras de datos\\RutasAereas\\RutasAereas\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CFFF2141-FC44-4E62-848D-4B30833A4C39}|RutasAereas\\RutasAereas.vcxproj|solutionrelative:RutasAereas\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFFF2141-FC44-4E62-848D-4B30833A4C39}|RutasAereas\\RutasAereas.vcxproj|C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras de datos\\RutasAereas\\RutasAereas\\Grafo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CFFF2141-FC44-4E62-848D-4B30833A4C39}|RutasAereas\\RutasAereas.vcxproj|solutionrelative:RutasAereas\\Grafo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFFF2141-FC44-4E62-848D-4B30833A4C39}|RutasAereas\\RutasAereas.vcxproj|C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras de datos\\RutasAereas\\RutasAereas\\Aeropuerto.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CFFF2141-FC44-4E62-848D-4B30833A4C39}|RutasAereas\\RutasAereas.vcxproj|solutionrelative:RutasAereas\\Aeropuerto.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFFF2141-FC44-4E62-848D-4B30833A4C39}|RutasAereas\\RutasAereas.vcxproj|C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras de datos\\RutasAereas\\RutasAereas\\Grafo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CFFF2141-FC44-4E62-848D-4B30833A4C39}|RutasAereas\\RutasAereas.vcxproj|solutionrelative:RutasAereas\\Grafo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Grafo.cpp",
+              "DocumentMoniker": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras de datos\\RutasAereas\\RutasAereas\\Grafo.cpp",
+              "RelativeDocumentMoniker": "RutasAereas\\Grafo.cpp",
+              "ToolTip": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras de datos\\RutasAereas\\RutasAereas\\Grafo.cpp",
+              "RelativeToolTip": "RutasAereas\\Grafo.cpp",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-10-26T21:06:04.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Aeropuerto.h",
+              "DocumentMoniker": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras de datos\\RutasAereas\\RutasAereas\\Aeropuerto.h",
+              "RelativeDocumentMoniker": "RutasAereas\\Aeropuerto.h",
+              "ToolTip": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras de datos\\RutasAereas\\RutasAereas\\Aeropuerto.h",
+              "RelativeToolTip": "RutasAereas\\Aeropuerto.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-10-26T21:00:49.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras de datos\\RutasAereas\\RutasAereas\\main.cpp",
+              "RelativeDocumentMoniker": "RutasAereas\\main.cpp",
+              "ToolTip": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras de datos\\RutasAereas\\RutasAereas\\main.cpp",
+              "RelativeToolTip": "RutasAereas\\main.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-10-26T21:00:08.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Grafo.h",
+              "DocumentMoniker": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras de datos\\RutasAereas\\RutasAereas\\Grafo.h",
+              "RelativeDocumentMoniker": "RutasAereas\\Grafo.h",
+              "ToolTip": "C:\\Users\\karen\\OneDrive\\Documentos\\Estructuras de datos\\RutasAereas\\RutasAereas\\Grafo.h",
+              "RelativeToolTip": "RutasAereas\\Grafo.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-10-26T20:59:28.352Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
