@@ -1,8 +1,10 @@
 #pragma once
+
 #ifndef AEROPUERTO_HPP
 #define AEROPUERTO_HPP
-using namespace std;
 #include <string>
+
+using namespace std;
 
 struct Aeropuerto {
     string codigo;

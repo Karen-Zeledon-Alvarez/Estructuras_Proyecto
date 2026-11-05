@@ -2,6 +2,8 @@
 
 #include <iostream>
 #include <fstream>
+#include <queue>
+#include <algorithm> 
 using namespace std;
 bool Grafo::cargarAeropuertos(const string& archivo) {
     ifstream entrada(archivo);
@@ -176,4 +178,83 @@ void Grafo::consultarAeropuerto(const string& codigo) const {
     cout << "Total de rutas salientes: "
         << rutas.size() << '\n';
 }
+const Ruta* Grafo::buscarRuta(int origen, int destino) const {
+    for (const Ruta& r : adyacencia[origen]) {
+        if (r.destino == destino) {
+            return &r;
+        }
+    }
+    return nullptr;
+}
+ResultadoRuta Grafo::construirResultado(int origen, int destino,
+    const vector<int>& padre) const {
+    ResultadoRuta r;
+    r.existe = true;
 
+    // Caminar hacia atrás
+    for (int v = destino; v != -1; v = padre[v]) {
+        r.camino.push_back(v);
+    }
+    reverse(r.camino.begin(), r.camino.end());
+
+    // Sumar minutos y costo de cada arista
+    for (size_t i = 0; i + 1 < r.camino.size(); i++) {
+        const Ruta* tramo = buscarRuta(r.camino[i], r.camino[i + 1]);
+        r.totalMinutos += tramo->minutos;
+        r.totalCosto += tramo->costo;
+    }
+    return r;
+}
+ResultadoRuta Grafo::rutaMenosEscalas(const string& codOrigen,
+    const string& codDestino) const {
+    ResultadoRuta vacio;   // existe = false
+
+    if (!existeAeropuerto(codOrigen) || !existeAeropuerto(codDestino)) {
+        return vacio;
+    }
+
+    int origen = indices.at(codOrigen);
+    int destino = indices.at(codDestino);
+    int n = static_cast<int>(aeropuertos.size());
+
+    vector<bool> visitado(n, false);
+    vector<int> padre(n, -1);
+    queue<int> cola;
+
+    visitado[origen] = true;
+    cola.push(origen);
+
+    while (!cola.empty()) {
+        int actual = cola.front();
+        cola.pop();
+
+        if (actual == destino) break;   // ya lo encontramos
+
+        for (const Ruta& r : adyacencia[actual]) {
+            if (!visitado[r.destino]) {
+                visitado[r.destino] = true;   // se marca AL ENCOLAR
+                padre[r.destino] = actual;
+                cola.push(r.destino);
+            }
+        }
+    }
+
+    if (!visitado[destino]) {
+        return vacio;   // nunca se llegó: no hay ruta
+    }
+    return construirResultado(origen, destino, padre);
+}
+void Grafo::mostrarResultado(const ResultadoRuta& r) const {
+    if (!r.existe) {
+        cout << "No existe ruta.\n";
+        return;
+    }
+    cout << "Ruta: ";
+    for (size_t i = 0; i < r.camino.size(); i++) {
+        cout << aeropuertos[r.camino[i]].codigo;
+        if (i + 1 < r.camino.size()) cout << " -> ";
+    }
+    cout << "\nVuelos: " << r.camino.size() - 1
+        << "\nMinutos totales: " << r.totalMinutos
+        << "\nCosto total: $" << r.totalCosto << '\n';
+}

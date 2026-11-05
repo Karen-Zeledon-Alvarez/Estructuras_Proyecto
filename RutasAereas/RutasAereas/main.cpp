@@ -23,6 +23,7 @@ int main() {
         cout << "\n========== MENU ==========\n";
         cout << "1. Consultar aeropuerto\n";
         cout << "2. Mostrar resumen del grafo\n";
+        cout << "3. Ruta con menos escalas\n";
         cout << "0. Salir\n";
         cout << "Seleccione una opcion: ";
 
@@ -45,6 +46,21 @@ int main() {
         case 2:
             grafo.mostrarResumen();
             break;
+        case 3:{
+            string o, d;
+            cout << "Origen: ";  cin >> o;
+            cout << "Destino: "; cin >> d;
+
+            if (!grafo.existeAeropuerto(o)) { cout << "El aeropuerto " << o << " no existe.\n"; break; }
+            if (!grafo.existeAeropuerto(d)) { cout << "El aeropuerto " << d << " no existe.\n"; break; }
+            if (o == d) { cout << "El origen y el destino son iguales.\n"; break; }
+
+            ResultadoRuta r = grafo.rutaMenosEscalas(o, d);
+            if (!r.existe) cout << "No existe ruta de " << o << " a " << d << ".\n";
+            else grafo.mostrarResultado(r);
+            break;
+        }
+        
 
         case 0:
             cout << "Cerrando el programa...\n";
