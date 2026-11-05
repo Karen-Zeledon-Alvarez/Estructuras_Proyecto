@@ -1,0 +1,13 @@
+# Cache y configuracion local de Visual Studio
+.vs/
+*.user
+
+# Archivos de compilacion
+x64/
+Debug/
+Release/
+*.exe
+*.pdb
+*.ilk
+*.obj
+*.ipch
