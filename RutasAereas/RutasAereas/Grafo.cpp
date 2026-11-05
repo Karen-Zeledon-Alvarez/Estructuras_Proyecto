@@ -77,6 +77,7 @@ bool Grafo::cargarRutas(const string& archivo) {
 
     // Reinicia las conexiones para evitar duplicarlas al recargar.
     adyacencia.assign(aeropuertos.size(), {});
+    canceladas.clear();
 
     for (int i = 0; i < cantidad; i++) {
         string origen, destino;
@@ -245,7 +246,7 @@ ResultadoRuta Grafo::rutaMenosEscalas(const string& codOrigen,
     }
 
     if (!visitado[destino]) {
-        return vacio;   // nunca se llegó: no hay ruta
+        return vacio;   // nunca se llego a una ruta
     }
     return construirResultado(origen, destino, padre);
 }
@@ -322,4 +323,129 @@ ResultadoRuta Grafo::rutaOptima(const string& codOrigen,
         return vacio;   // nunca se alcanzó
     }
     return construirResultado(origen, destino, padre);
+}
+
+void Grafo::dfs(int u, vector<bool>& visitado) const {
+    visitado[u] = true;
+
+    for (const Ruta& r : adyacencia[u]) {
+        if (!visitado[r.destino]) {
+            dfs(r.destino, visitado);
+        }
+    }
+}
+
+vector<bool> Grafo::alcanzables(const string& codOrigen) const {
+    vector<bool> visitado(aeropuertos.size(), false);
+
+    if (!existeAeropuerto(codOrigen)) {
+        return visitado;   // todo en false
+    }
+    dfs(indices.at(codOrigen), visitado);
+    return visitado;
+}
+
+void Grafo::mostrarAlcanzables(const string& codOrigen) const {
+    vector<bool> visitado = alcanzables(codOrigen);
+    int origen = indices.at(codOrigen);
+
+    vector<string> si, no;
+    for (size_t i = 0; i < aeropuertos.size(); i++) {
+        if ((int)i == origen) continue;   // el origen no se lista
+        if (visitado[i]) si.push_back(aeropuertos[i].codigo);
+        else             no.push_back(aeropuertos[i].codigo);
+    }
+
+    cout << "\nAlcanzables desde " << codOrigen << " (" << si.size() << "): ";
+    for (const string& c : si) cout << c << ' ';
+    cout << "\nNo alcanzables (" << no.size() << "): ";
+    for (const string& c : no) cout << c << ' ';
+    if (no.empty()) cout << "ninguno";
+    cout << '\n';
+}
+
+vector<int> Grafo::noLleganA(const string& codDestino) const {
+    vector<int> resultado;
+    if (!existeAeropuerto(codDestino)) return resultado;
+
+    int destino = indices.at(codDestino);
+
+    // Para cada aeropuerto, se hace un dfs y se revisa si toca el destino.
+    for (size_t i = 0; i < aeropuertos.size(); i++) {
+        if ((int)i == destino) continue;
+
+        vector<bool> visitado(aeropuertos.size(), false);
+        dfs((int)i, visitado);
+
+        if (!visitado[destino]) {
+            resultado.push_back((int)i);
+        }
+    }
+    return resultado;
+}
+
+bool Grafo::cancelarRuta(const string& codOrigen, const string& codDestino) {
+    if (!existeAeropuerto(codOrigen) || !existeAeropuerto(codDestino)) {
+        return false;
+    }
+
+    int origen = indices.at(codOrigen);
+    int destino = indices.at(codDestino);
+    vector<Ruta>& lista = adyacencia[origen];   //modifica la real
+
+    for (size_t i = 0; i < lista.size(); i++) {
+        if (lista[i].destino == destino) {
+            canceladas.push_back({ origen, lista[i] });   // guarda antes de borrar
+            lista.erase(lista.begin() + i);
+            return true;
+        }
+    }
+    return false;   // esa ruta no existe
+}
+
+int Grafo::restaurarRutas() {
+    int cantidad = static_cast<int>(canceladas.size());
+
+    for (const RutaCancelada& c : canceladas) {
+        adyacencia[c.origen].push_back(c.ruta);
+    }
+    canceladas.clear();
+    return cantidad;
+}
+
+vector<pair<int, int>> Grafo::rutasCriticas(const string& codOrigen) {
+    vector<pair<int, int>> criticas;
+    if (!existeAeropuerto(codOrigen)) return criticas;
+
+    int origen = indices.at(codOrigen);
+    int n = static_cast<int>(aeropuertos.size());
+
+    // Lo alcanzable con el grafo completo
+    vector<bool> base = alcanzables(codOrigen);
+
+    for (int u = 0; u < n; u++) {
+        // Si u no es alcanzable
+        if (!base[u]) continue;
+
+        for (size_t k = 0; k < adyacencia[u].size(); k++) {
+            // Quitar temporalmente la ruta k
+            Ruta guardada = adyacencia[u][k];
+            adyacencia[u].erase(adyacencia[u].begin() + k);
+
+            vector<bool> visitado(n, false);
+            dfs(origen, visitado);
+
+            // Devolverla a la posición.
+            adyacencia[u].insert(adyacencia[u].begin() + k, guardada);
+
+            // aeropuerto que antes se alcanzaba dejó de alcanzarse
+            for (int v = 0; v < n; v++) {
+                if (base[v] && !visitado[v]) {
+                    criticas.push_back({ u, guardada.destino });
+                    break;
+                }
+            }
+        }
+    }
+    return criticas;
 }

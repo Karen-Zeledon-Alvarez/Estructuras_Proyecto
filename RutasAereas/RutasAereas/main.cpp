@@ -51,6 +51,11 @@ int main() {
         cout << "3. Ruta con menos escalas\n";
         cout << "4. Ruta mas rapida\n";
         cout << "5. Ruta mas barata\n";
+        cout << "6. Destinos alcanzables\n";
+        cout << "7. Aeropuertos que no llegan a un destino\n";
+        cout << "8. Cancelar ruta\n";
+        cout << "9. Restaurar rutas\n";
+        cout << "10. Rutas criticas\n";
         cout << "0. Salir\n";
         cout << "Seleccione una opcion: ";
 
@@ -99,6 +104,71 @@ int main() {
 
             if (!r.existe) cout << "No existe ruta de " << o << " a " << d << ".\n";
             else grafo.mostrarResultado(r);
+            break;
+        }
+        case 6: {
+            string codigo;
+            cout << "Origen: "; cin >> codigo;
+            if (!grafo.existeAeropuerto(codigo)) {
+                cout << "El aeropuerto " << codigo << " no existe.\n";
+                break;
+            }
+            grafo.mostrarAlcanzables(codigo);
+            break;
+        }
+
+        case 7: {
+            string codigo;
+            cout << "Destino: "; cin >> codigo;
+            if (!grafo.existeAeropuerto(codigo)) {
+                cout << "El aeropuerto " << codigo << " no existe.\n";
+                break;
+            }
+            vector<int> lista = grafo.noLleganA(codigo);
+            cout << "No pueden llegar a " << codigo << ": ";
+            if (lista.empty()) cout << "ninguno";
+            for (int i : lista) cout << grafo.codigoDe(i) << ' ';
+            cout << '\n';
+            break;
+        }
+
+        case 8: {
+            string o, d;
+            cout << "Origen de la ruta: ";  cin >> o;
+            cout << "Destino de la ruta: "; cin >> d;
+
+            if (!grafo.existeAeropuerto(o) || !grafo.existeAeropuerto(d)) {
+                cout << "Alguno de los aeropuertos no existe.\n";
+            }
+            else if (grafo.cancelarRuta(o, d)) {
+                cout << "Ruta " << o << " -> " << d << " cancelada.\n";
+            }
+            else {
+                cout << "No existe una ruta activa " << o << " -> " << d << ".\n";
+            }
+            break;
+        }
+
+        case 9: {
+            int n = grafo.restaurarRutas();
+            cout << "Rutas restauradas: " << n << '\n';
+            break;
+        }
+
+        case 10: {
+            string codigo;
+            cout << "Origen: "; cin >> codigo;
+            if (!grafo.existeAeropuerto(codigo)) {
+                cout << "El aeropuerto " << codigo << " no existe.\n";
+                break;
+            }
+            vector<pair<int, int>> lista = grafo.rutasCriticas(codigo);
+            cout << "Rutas cuya cancelacion deja aeropuertos inalcanzables desde "
+                << codigo << ": " << lista.size() << '\n';
+            for (const auto& par : lista) {
+                cout << "  " << grafo.codigoDe(par.first) << " -> "
+                    << grafo.codigoDe(par.second) << '\n';
+            }
             break;
         }
 
