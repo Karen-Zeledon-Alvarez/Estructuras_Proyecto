@@ -1,10 +1,12 @@
 #include "Grafo.h"
-
+#include <limits>
 #include <iostream>
 #include <fstream>
 #include <queue>
 #include <algorithm> 
+
 using namespace std;
+
 bool Grafo::cargarAeropuertos(const string& archivo) {
     ifstream entrada(archivo);
 
@@ -178,6 +180,7 @@ void Grafo::consultarAeropuerto(const string& codigo) const {
     cout << "Total de rutas salientes: "
         << rutas.size() << '\n';
 }
+
 const Ruta* Grafo::buscarRuta(int origen, int destino) const {
     for (const Ruta& r : adyacencia[origen]) {
         if (r.destino == destino) {
@@ -186,6 +189,7 @@ const Ruta* Grafo::buscarRuta(int origen, int destino) const {
     }
     return nullptr;
 }
+
 ResultadoRuta Grafo::construirResultado(int origen, int destino,
     const vector<int>& padre) const {
     ResultadoRuta r;
@@ -205,6 +209,7 @@ ResultadoRuta Grafo::construirResultado(int origen, int destino,
     }
     return r;
 }
+
 ResultadoRuta Grafo::rutaMenosEscalas(const string& codOrigen,
     const string& codDestino) const {
     ResultadoRuta vacio;   // existe = false
@@ -244,6 +249,7 @@ ResultadoRuta Grafo::rutaMenosEscalas(const string& codOrigen,
     }
     return construirResultado(origen, destino, padre);
 }
+
 void Grafo::mostrarResultado(const ResultadoRuta& r) const {
     if (!r.existe) {
         cout << "No existe ruta.\n";
@@ -257,4 +263,63 @@ void Grafo::mostrarResultado(const ResultadoRuta& r) const {
     cout << "\nVuelos: " << r.camino.size() - 1
         << "\nMinutos totales: " << r.totalMinutos
         << "\nCosto total: $" << r.totalCosto << '\n';
+}
+
+double Grafo::peso(const Ruta& r, Criterio criterio) {
+    if (criterio == Criterio::MINUTOS) {
+        return r.minutos;
+    }
+    return r.costo;
+}
+
+ResultadoRuta Grafo::rutaOptima(const string& codOrigen,
+    const string& codDestino,
+    Criterio criterio) const {
+    ResultadoRuta vacio;
+
+    if (!existeAeropuerto(codOrigen) || !existeAeropuerto(codDestino)) {
+        return vacio;
+    }
+
+    int origen = indices.at(codOrigen);
+    int destino = indices.at(codDestino);
+    int n = static_cast<int>(aeropuertos.size());
+
+    const double INF = numeric_limits<double>::infinity();
+    vector<double> dist(n, INF);
+    vector<int> padre(n, -1);
+
+    // Cola de prioridad de pares (distancia, aeropuerto).
+    // greater<> hace que salga primero la MENOR distancia.
+    using Par = pair<double, int>;
+    priority_queue<Par, vector<Par>, greater<Par>> cola;
+
+    dist[origen] = 0;
+    cola.push({ 0, origen });
+
+    while (!cola.empty()) {
+        auto [d, u] = cola.top();
+        cola.pop();
+
+        // Entrada vieja: u ya se mejoró después de meter este par.
+        if (d > dist[u]) continue;
+
+        // Al sacarlo, su distancia es definitiva: podemos terminar.
+        if (u == destino) break;
+
+        for (const Ruta& r : adyacencia[u]) {
+            double nueva = dist[u] + peso(r, criterio);
+
+            if (nueva < dist[r.destino]) {      // relajación
+                dist[r.destino] = nueva;
+                padre[r.destino] = u;
+                cola.push({ nueva, r.destino });
+            }
+        }
+    }
+
+    if (dist[destino] == INF) {
+        return vacio;   // nunca se alcanzó
+    }
+    return construirResultado(origen, destino, padre);
 }

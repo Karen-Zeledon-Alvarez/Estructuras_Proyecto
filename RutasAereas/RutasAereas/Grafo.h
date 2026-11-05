@@ -9,6 +9,7 @@
 #include <string>
 #include <queue>
 #include <algorithm> 
+
 using namespace std;
 
 struct ResultadoRuta {
@@ -17,6 +18,8 @@ struct ResultadoRuta {
     int totalMinutos = 0;
     double totalCosto = 0;
 };
+
+enum class Criterio { MINUTOS, COSTO };
 
 class Grafo {
 private:
@@ -33,7 +36,10 @@ private:
 
     //Reconstruye el camino usando el vector padre y suma
     ResultadoRuta construirResultado(int origen, int destino, const vector<int>& padre) const;
-
+    
+    // Que usa dijkstra
+    static double peso(const Ruta& r, Criterio criterio);
+    
 public:
     bool cargarAeropuertos(const string& archivo);
     bool cargarRutas(const string& archivo);
@@ -45,6 +51,9 @@ public:
 
     ResultadoRuta rutaMenosEscalas(const string& codOrigen, const string& codDestino) const;
     void mostrarResultado(const ResultadoRuta& r) const;
+
+    ResultadoRuta rutaOptima(const string& codOrigen,const string& codDestino,
+        Criterio criterio) const;
 };
 
 #endif
