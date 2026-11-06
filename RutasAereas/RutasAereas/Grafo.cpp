@@ -207,6 +207,8 @@ ResultadoRuta Grafo::construirResultado(int origen, int destino,
         const Ruta* tramo = buscarRuta(r.camino[i], r.camino[i + 1]);
         r.totalMinutos += tramo->minutos;
         r.totalCosto += tramo->costo;
+        r.minutosTramo.push_back(tramo->minutos);
+        r.costoTramo.push_back(tramo->costo);
     }
     return r;
 }

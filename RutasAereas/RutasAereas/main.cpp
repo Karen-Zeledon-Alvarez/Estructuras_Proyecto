@@ -19,6 +19,8 @@ int main() {
         return 1;
         }
 
+    //mainConsola(grafo);
+    
     Interfaz interfaz(grafo);
     if (!interfaz.iniciar("datos/comic.ttf")) return 1;
     interfaz.ejecutar();

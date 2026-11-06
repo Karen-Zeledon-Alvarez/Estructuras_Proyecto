@@ -8,6 +8,8 @@
 
 const float TAM_MUNDO = 1000.f;   // las coordenadas del archivo son de 1000x1000
 const float RADIO = 6.f;
+const float PAUSA_ESCALA = 1.0f;          // segundos detenido en cada escala
+const sf::Color COLOR_TRAMO_ACTUAL(255, 220, 0);
 
 // Colores usados en varias partes
 const sf::Color COLOR_ORIGEN(20, 150, 50);       // verde
@@ -91,11 +93,20 @@ void Interfaz::crearBotones() {
     agregar(2, 0, "Cancelar ruta", Accion::CANCELAR);
     agregar(2, 1, "Restaurar rutas", Accion::RESTAURAR);
     agregar(3, 0, "Limpiar", Accion::LIMPIAR);
+    agregar(3, 1, "Animar", Accion::ANIMAR);
+    agregar(4, 0, "Pausar", Accion::PAUSAR);
+    agregar(4, 1, "Reiniciar", Accion::REINICIAR);
 }
 
 void Interfaz::ejecutar() {
+    reloj.restart();
     while (ventana.isOpen()) {
         procesarEventos();
+
+        // Segundos desde el frame anterior. Se limita a 0.1 si la
+        // ventana se congela un momento el avión no salte.
+        float dt = min(reloj.restart().asSeconds(), 0.1f);
+        actualizarAnimacion(dt);
 
         ventana.clear(sf::Color(235, 242, 250));
         dibujarMapa();
@@ -171,12 +182,40 @@ void Interfaz::ejecutarAccion(Accion accion) {
         modo = Modo::NINGUNO;
         mostrandoAlcanzables = false;
         break;
-    }
 
+    case Accion::ANIMAR:
+        if (!resultado.existe) {
+            mensaje = "Primero calcule una ruta.";
+            return;
+        }
+        iniciarAnimacion();
+        return;
+
+    case Accion::PAUSAR:
+        if (!animando) {
+            mensaje = "No hay animacion en curso.";
+            return;
+        }
+        pausado = !pausado;   // alterna pausa / continuar
+        return;
+
+    case Accion::REINICIAR:
+        if (!animando && !animacionTerminada) {
+            mensaje = "No hay animacion para reiniciar.";
+            return;
+        }
+        iniciarAnimacion();
+        return;
+    }
     recalcular();   // cualquier cambio vuelve a consultar al grafo
 }
 
 void Interfaz::recalcular() {
+
+    animando = false;
+    pausado = false;
+    animacionTerminada = false;
+
     resultado = ResultadoRuta();   // borra la ruta anterior
 
     if (modo != Modo::NINGUNO) {
@@ -332,9 +371,11 @@ void Interfaz::dibujarMapa() {
     if (resultado.existe) {
         const vector<int>& camino = resultado.camino;
         for (size_t k = 0; k + 1 < camino.size(); k++) {
+            bool esActual = animando && !enEscala && static_cast<int>(k) == tramo;
             dibujarLineaGruesa(posicion(grafo.getAeropuerto(camino[k])),
                 posicion(grafo.getAeropuerto(camino[k + 1])),
-                4.f, COLOR_RUTA);
+                esActual ? 6.f : 4.f,
+                esActual ? COLOR_TRAMO_ACTUAL : COLOR_RUTA);
         }
     }
 
@@ -358,6 +399,7 @@ void Interfaz::dibujarMapa() {
 
         escribir(a.codigo, a.x + 8.f, a.y - 18.f, 14, sf::Color::Black);
     }
+    dibujarAvion();   // encima de todo
 }
 
 void Interfaz::dibujarBotones() {
@@ -376,7 +418,10 @@ void Interfaz::dibujarBotones() {
         rect.setOutlineColor(sf::Color(120, 135, 165));
         ventana.draw(rect);
 
-        escribir(b.texto, b.area.position.x + 10.f, b.area.position.y + 7.f,
+        string texto = b.texto;
+        if (b.accion == Accion::PAUSAR && pausado) texto = "Continuar";
+
+        escribir(texto, b.area.position.x + 10.f, b.area.position.y + 7.f,
             14, sf::Color::White);
     }
 }
@@ -408,7 +453,7 @@ void Interfaz::dibujarPanel() {
 
     dibujarBotones();
 
-    float y = 320.f;   // debajo de los botones
+    float y = 360.f;   // debajo de los botones
 
     // Resultado de la ruta
     if (resultado.existe) {
@@ -452,6 +497,33 @@ void Interfaz::dibujarPanel() {
         y += 22.f * ((no.size() + 4) / 5 + 1) + 8.f;
     }
 
+    // Animación
+    if (animando || animacionTerminada) {
+        const vector<int>& c = resultado.camino;
+        int vuelos = static_cast<int>(c.size()) - 1;
+
+        string estado = "Volando";
+        if (animacionTerminada) estado = "Llegada a " + codigo(c.back());
+        else if (pausado)       estado = "Pausado";
+        else if (enEscala)      estado = "Escala en " + codigo(c[tramo]);
+
+        escribir("Animacion: " + estado, x, y, 16, amarillo);
+        y += 26.f;
+
+        if (!animacionTerminada) {
+            escribir("Tramo " + to_string(tramo + 1) + " de " + to_string(vuelos) + ": "
+                + codigo(c[tramo]) + " -> " + codigo(c[tramo + 1]), x, y, 15, blanco);
+            y += 24.f;
+            escribir("   " + to_string(resultado.minutosTramo[tramo]) + " min, "
+                + formatoCosto(resultado.costoTramo[tramo]), x, y, 15, tenue);
+            y += 24.f;
+        }
+
+        escribir("Acumulado: " + to_string(minutosAcum) + " min, "
+            + formatoCosto(costoAcum), x, y, 15, blanco);
+        y += 34.f;
+    }
+
     // Mensajes y avisos
     if (!mensaje.empty()) {
         escribir(mensaje, x, y, 15, amarillo);
@@ -462,4 +534,94 @@ void Interfaz::dibujarPanel() {
         "Naranja: ruta   Rojo punteado: cancelada\n"
         "Celeste / gris: alcanzable / no",
         x, ladoMapa - 75.f, 13, tenue);
+}
+
+void Interfaz::iniciarAnimacion() {
+    animando = true;
+    pausado = false;
+    animacionTerminada = false;
+    enEscala = false;
+    tramo = 0;
+    progreso = 0.f;
+    tiempoEscala = 0.f;
+    minutosAcum = 0;
+    costoAcum = 0;
+}
+
+// Segundos que tarda en pantalla el tramo k: proporcional a sus minutos reales
+// (80 minutos de vuelo = 1 segundo), con un mínimo para que se alcance a ver
+float Interfaz::duracionTramo(int k) const {
+    return max(0.8f, resultado.minutosTramo[k] / 80.f);
+}
+
+void Interfaz::actualizarAnimacion(float dt) {
+    if (!animando || pausado) return;
+
+    // Estado: detenido en una escala.
+    if (enEscala) {
+        tiempoEscala += dt;
+        if (tiempoEscala >= PAUSA_ESCALA) {
+            enEscala = false;
+            tiempoEscala = 0.f;
+        }
+        return;
+    }
+
+    // Estado: volando. Avanza la fracción del tramo
+    progreso += dt / duracionTramo(tramo);
+
+    if (progreso >= 1.f) {
+        // Terminó el tramo: se suman sus minutos y su costo
+        minutosAcum += resultado.minutosTramo[tramo];
+        costoAcum += resultado.costoTramo[tramo];
+        progreso = 0.f;
+        tramo++;
+
+        int vuelos = static_cast<int>(resultado.camino.size()) - 1;
+        if (tramo >= vuelos) {
+            animando = false;            // llegó al destino final
+            animacionTerminada = true;
+        }
+        else {
+            enEscala = true;             // aeropuerto intermedio: se detiene
+        }
+    }
+}
+
+sf::Vector2f Interfaz::posicionAvion() const {
+    const vector<int>& c = resultado.camino;
+
+    if (animacionTerminada) {
+        return posicion(grafo.getAeropuerto(c.back()));
+    }
+
+    // Interpolación lineal: P = A + (B - A) * t
+    sf::Vector2f a = posicion(grafo.getAeropuerto(c[tramo]));
+    sf::Vector2f b = posicion(grafo.getAeropuerto(c[tramo + 1]));
+    return a + (b - a) * progreso;
+}
+
+void Interfaz::dibujarAvion() {
+    if (!animando && !animacionTerminada) return;
+
+    const vector<int>& c = resultado.camino;
+
+    // Dirección hacia la que apunta: el tramo actual (o el último si ya llegó).
+    int k = min(tramo, static_cast<int>(c.size()) - 2);
+    sf::Vector2f a = posicion(grafo.getAeropuerto(c[k]));
+    sf::Vector2f b = posicion(grafo.getAeropuerto(c[k + 1]));
+    sf::Vector2f d = b - a;
+
+    // Un triángulo que apunta hacia la derecha; luego se rota.
+    sf::ConvexShape avion(3);
+    avion.setPoint(0, { 16.f, 0.f });     // punta
+    avion.setPoint(1, { -10.f, -8.f });   // ala izquierda
+    avion.setPoint(2, { -10.f, 8.f });    // ala derecha
+    avion.setFillColor(sf::Color(25, 25, 25));
+    avion.setOutlineThickness(1.5f);
+    avion.setOutlineColor(sf::Color::White);
+
+    avion.setPosition(posicionAvion());
+    avion.setRotation(sf::radians(std::atan2(d.y, d.x)));
+    ventana.draw(avion);
 }

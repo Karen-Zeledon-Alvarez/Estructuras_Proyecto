@@ -17,6 +17,8 @@ struct ResultadoRuta {
     vector<int> camino;      // índices de aeropuertos, del origen al destino
     int totalMinutos = 0;
     double totalCosto = 0;
+    vector<int> minutosTramo;
+    vector<double> costoTramo;
 };
 
 enum class Criterio { MINUTOS, COSTO };
