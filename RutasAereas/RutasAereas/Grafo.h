@@ -83,6 +83,14 @@ public:
     // Rutas cuya cancelación deja algún aeropuerto inalcanzable desde el origen.
     vector<pair<int, int>> rutasCriticas(const string& codOrigen);
     
+    int cantidadAeropuertos() const { 
+        return static_cast<int>(aeropuertos.size()); }
+
+    const Aeropuerto& getAeropuerto(int i) const { 
+        return aeropuertos[i]; }
+
+    const vector<Ruta>& getRutas(int i) const { 
+        return adyacencia[i]; }
 };
 
 #endif

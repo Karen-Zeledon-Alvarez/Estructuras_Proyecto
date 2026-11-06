@@ -21,12 +21,24 @@
     <ClInclude Include="Aeropuerto.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="Interfaz.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="mainConsola.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Grafo.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Interfaz.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="mainConsola.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
@@ -37,5 +49,8 @@
     <Text Include="datos\rutas.txt">
       <Filter>Archivos de recursos</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="datos\comic.ttf" />
   </ItemGroup>
 </Project>
